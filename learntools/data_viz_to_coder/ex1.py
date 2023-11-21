@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 from learntools.core import *
 
-df = pd.read_csv("../input/fifa.csv", index_col="Date", parse_dates=True)
+df = pd.read_csv("fifa.csv", index_col="Date", parse_dates=True)
 
 class FeedbackSys(EqualityCheckProblem):
     _var = 'one'
