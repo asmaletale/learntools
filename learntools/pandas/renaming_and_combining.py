@@ -11,7 +11,7 @@ movie_products = pd.read_csv("/content/drive/My Drive/Colab Notebooks/Diagnostic
 movie_products['subreddit'] = "r/movies"
 
 powerlifting_meets = pd.read_csv("/content/drive/My Drive/Colab Notebooks/Diagnostica/4_pandas/meets.csv")
-powerlifting_competitors = pd.read_csv("/content/drive/My Drive/Colab Notebooks/Diagnostica/4_pandasopenpowerlifting.csv")
+powerlifting_competitors = pd.read_csv("/content/drive/My Drive/Colab Notebooks/Diagnostica/4_pandas/openpowerlifting.csv")
 
 class RenameCols(EqualityCheckProblem):
     _var = 'renamed'
