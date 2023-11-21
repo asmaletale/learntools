@@ -5,13 +5,13 @@ from learntools.core import *
 reviews = pd.read_csv("../input/wine-reviews/winemag-data-130k-v2.csv", index_col=0)
 
 # Load some other datasets used in this exercise
-gaming_products = pd.read_csv("../input/things-on-reddit/top-things/top-things/reddits/g/gaming.csv")
+gaming_products = pd.read_csv("/content/drive/My Drive/Colab Notebooks/Diagnostica/4_pandas/gaming.csv")
 gaming_products['subreddit'] = "r/gaming"
-movie_products = pd.read_csv("../input/things-on-reddit/top-things/top-things/reddits/m/movies.csv")
+movie_products = pd.read_csv("/content/drive/My Drive/Colab Notebooks/Diagnostica/4_pandas/movies.csv")
 movie_products['subreddit'] = "r/movies"
 
-powerlifting_meets = pd.read_csv("../input/powerlifting-database/meets.csv")
-powerlifting_competitors = pd.read_csv("../input/powerlifting-database/openpowerlifting.csv")
+powerlifting_meets = pd.read_csv("/content/drive/My Drive/Colab Notebooks/Diagnostica/4_pandas/meets.csv")
+powerlifting_competitors = pd.read_csv("/content/drive/My Drive/Colab Notebooks/Diagnostica/4_pandasopenpowerlifting.csv")
 
 class RenameCols(EqualityCheckProblem):
     _var = 'renamed'
