@@ -2,7 +2,7 @@ import pandas as pd
 
 from learntools.core import *
 
-reviews = pd.read_csv("../input/wine-reviews/winemag-data-130k-v2.csv", index_col=0)
+reviews = pd.read_csv("/content/drive/My Drive/Colab Notebooks/Diagnostica/4_pandas/winemag-data-130k-v2.csv", index_col=0)
 
 # 1
 class MedianPoints(EqualityCheckProblem):
