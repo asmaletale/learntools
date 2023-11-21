@@ -56,30 +56,30 @@ class ReadWineCsv(EqualityCheckProblem):
     "reviews = pd.read_csv('/content/drive/My Drive/Colab Notebooks/Diagnostica/4_pandas/winemag-data_first150k.csv', index_col=0)"
     )
 
-class SaveAnimalsCsv(CodingProblem):
+#class SaveAnimalsCsv(CodingProblem):
+#
+#    _solution = CS('animals.to_csv("cows_and_goats.csv")')
+#    _hint = 'Use [`to_csv`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_csv.html) to save a DataFrame to a CSV file.'
+#
+#    def check(self):
+#        path = 'cows_and_goats.csv'
+#        assert_file_exists(path)
+#        actual = pd.read_csv(path, index_col=0)
+#        expected = pd.DataFrame({'Cows': [12, 20], 'Goats': [22, 19]}, 
+#               index=['Year 1', 'Year 2'])
+#        assert_df_equals(actual, expected, 
+#            name="Dataframe loaded from `cows_and_goats.csv`")
 
-    _solution = CS('animals.to_csv("cows_and_goats.csv")')
-    _hint = 'Use [`to_csv`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_csv.html) to save a DataFrame to a CSV file.'
-
-    def check(self):
-        path = 'cows_and_goats.csv'
-        assert_file_exists(path)
-        actual = pd.read_csv(path, index_col=0)
-        expected = pd.DataFrame({'Cows': [12, 20], 'Goats': [22, 19]}, 
-                index=['Year 1', 'Year 2'])
-        assert_df_equals(actual, expected, 
-            name="Dataframe loaded from `cows_and_goats.csv`")
-
-class ReadPitchforkSql(EqualityCheckProblem):
-    _var = 'music_reviews'
+#class ReadPitchforkSql(EqualityCheckProblem):
+#    _var = 'music_reviews'
     # TODO: Is loading expected values expensive here? May want to do it on-demand 
     # when check is first called, rather than on import
-    conn = sqlite3.connect("../input/pitchfork-data/database.sqlite")
-    _expected = (
-        pd.read_sql_query("SELECT * FROM artists", conn),
-    )
-    _hint = 'After importing `sqlite3`, you first need to create a connector.  Then, you can supply an SQL statement to `pd.read_sql_query` to pull all of the data from the `artists` table.  For more information, check out the [Creating, Reading, and Writing Reference](https://www.kaggle.com/residentmario/creating-reading-and-writing-reference).'
-    conn.close()
+#    conn = sqlite3.connect("../input/pitchfork-data/database.sqlite")
+#    _expected = (
+#        pd.read_sql_query("SELECT * FROM artists", conn),
+#    )
+#    _hint = 'After importing `sqlite3`, you first need to create a connector.  Then, you can supply an SQL statement to `pd.read_sql_query` to pull all of the data from the `artists` table.  For more information, check out the [Creating, Reading, and Writing Reference](https://www.kaggle.com/residentmario/creating-reading-and-writing-reference).'
+#    conn.close()
 
     _solution = CS("""\
 import sqlite3
@@ -93,8 +93,8 @@ qvars = bind_exercises(globals(), [
     FruitSalesDfCreation,
     RecipeSeriesCreation,
     ReadWineCsv,
-    SaveAnimalsCsv,
-    ReadPitchforkSql,
+    #SaveAnimalsCsv,
+    #ReadPitchforkSql,
     ],
     )
 __all__ = list(qvars)
