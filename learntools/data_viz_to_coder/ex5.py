@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 from learntools.core import *
 
-df = pd.read_csv("/content/drive/My Drive/Colab Notebooks/Diagnostica/5_seaborn/cancer.csv", index_col="Id")
+df = pd.read_csv("/content/drive/My Drive/Colab Notebooks/Diagnostica/6_seaborn/cancer.csv", index_col="Id")
 
 class LoadCancerData(EqualityCheckProblem):
     _var = 'cancer_data'
