@@ -10,7 +10,7 @@ sample_entry = b'\xa7A\xa6n'
 before = sample_entry.decode("big5-tw")
 new_entry = before.encode()
 
-police_killings = pd.read_csv("../input/fatal-police-shootings-in-the-us/PoliceKillingsUS.csv", encoding='Windows-1252')
+police_killings = pd.read_csv("/content/drive/My Drive/Colab Notebooks/Diagnostica/9_data_cleaning/PoliceKillingsUS.csv", encoding='Windows-1252')
  
 class EncodingsIntro(EqualityCheckProblem):
     _var = 'new_entry'
@@ -26,14 +26,14 @@ class ReadIn(EqualityCheckProblem):
     _expected = police_killings
     _hint = "If you try to guess the encoding with the first 10,000 bytes of the file, it might give you the wrong answer.  Try using 100,000 or more lines of the file."
     _solution = CS(
-"""police_killings = pd.read_csv("../input/fatal-police-shootings-in-the-us/PoliceKillingsUS.csv", encoding='Windows-1252')
+"""police_killings = pd.read_csv("/content/drive/My Drive/Colab Notebooks/Diagnostica/9_data_cleaning/PoliceKillingsUS.csv", encoding='Windows-1252')
 """)
     
 class SaveCSV(CodingProblem):
     _hint = "Use `.to_csv().`"
     _solution = CS(
 """
-police_killings.to_csv("my_file.csv")
+police_killings.to_csv("/content/drive/My Drive/Colab Notebooks/Diagnostica/9_data_cleaning/my_file.csv")
 """)
     def check(self):
         # Test 1: does the file exist?
