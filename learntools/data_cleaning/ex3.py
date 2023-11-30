@@ -5,7 +5,7 @@ import numpy as np
 import seaborn as sns
 import datetime
 
-earthquakes = pd.read_csv("../input/earthquake-database/database.csv")
+earthquakes = pd.read_csv("/content/drive/My Drive/Colab Notebooks/Diagnostica/9_data_cleaning/e_database.csv")
 np.random.seed(0)
 earthquakes.loc[3378, "Date"] = "02/23/1975"
 earthquakes.loc[7512, "Date"] = "04/28/1985"
