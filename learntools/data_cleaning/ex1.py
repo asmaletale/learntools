@@ -3,7 +3,7 @@ import numpy as np
 
 from learntools.core import *
 
-sf_permits = pd.read_csv("../input/building-permit-applications-data/Building_Permits.csv")
+sf_permits = pd.read_csv("/content/drive/My Drive/Colab Notebooks/Diagnostica/9_data_cleaning/Building_Permits.csv")
 np.random.seed(0) 
 
 missing_values_count = sf_permits.isnull().sum()
