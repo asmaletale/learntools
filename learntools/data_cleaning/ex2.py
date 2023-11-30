@@ -7,7 +7,7 @@ from mlxtend.preprocessing import minmax_scaling
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-kickstarters_2017 = pd.read_csv("../input/kickstarter-projects/ks-projects-201801.csv")
+kickstarters_2017 = pd.read_csv("/content/drive/My Drive/Colab Notebooks/Diagnostica/9_data_cleaning/ks-projects-201801.csv")
 np.random.seed(0)
 original_goal_data = pd.DataFrame(kickstarters_2017.goal)
 scaled_goal_data = minmax_scaling(original_goal_data, columns=['goal'])
