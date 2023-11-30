@@ -2,8 +2,8 @@ from pathlib import Path
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 
-comp_dir = Path('/content/drive/My Drive/Colab Notebooks/Diagnostica/8_time_series/')
-data_dir = Path('/content/drive/My Drive/Colab Notebooks/Diagnostica/8_time_series/')
+comp_dir = Path('/content/drive/My Drive/Colab Notebooks/Diagnostica/8_time_series')
+data_dir = Path('/content/drive/My Drive/Colab Notebooks/Diagnostica/8_time_series')
 
 
 def load_store_sales():
