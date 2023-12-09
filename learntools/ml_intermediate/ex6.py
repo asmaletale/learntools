@@ -8,7 +8,7 @@ from learntools.core import *
 
 # Load the data
 X = pd.read_csv('/content/drive/My Drive/Colab Notebooks/Diagnostica/5_intermediate_machine_learning/train.csv', index_col='Id')
-X_test_full = pd.read_csv('/content/drive/My Drive/Colab Notebooks/Diagnostica/5_intermediate_machine_learning/input/test.csv', index_col='Id')
+X_test_full = pd.read_csv('/content/drive/My Drive/Colab Notebooks/Diagnostica/5_intermediate_machine_learning/test.csv', index_col='Id')
 X.dropna(axis=0, subset=['SalePrice'], inplace=True)
 y = X.SalePrice
 X.drop(['SalePrice'], axis=1, inplace=True)
